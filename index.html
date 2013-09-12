@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Agenda de atividades acadêmicas</title>
+      <meta charset="utf-8"/>
+      
+      <!-- Carrega jQuery Mobile -->
+      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+      <link rel="stylesheet" href="js/jquery.mobile-1.3.2.min.css" />
+      
+      <!-- Carrega Classe AGENDA -->
+      <script type="text/javascript" src="js/agenda.js"></script>
+      <!-- Scripts da lógica de negócios -->
+      <script type="text/javascript">
+         function inicializa() {
+            oAgenda = new Agenda;
+         }
+      </script>
+   </head>
+   
+   <body onLoad="inicializa();">
+      <div data-role="page">
+         <div data-role="header">
+            <h1>Agenda acadêmica</h1>
+         </div>
+         <div data-role="content">
+            <form action="#" method="get">
+           
+               <div data-role="fieldcontain">
+                  <label for="disciplina">Disciplina:</label>
+                  <select name="disciplina" id="disciplina">
+                     <option value="pdm">Programação para Dispositivos Móveis</option>
+                     <option value="o1">Outra 1</option>
+                     <option value="o2">Outra 2</option>
+                     <option value="o3">Outra 3</option>
+                  </select>
+               </div>
+               
+               <div data-role="fieldcontain">
+                  <label for="data">Data:</label>
+                  <input type="date" name="data" id="data" value=""  />
+               </div>
+               
+               <div data-role="fieldcontain">
+                  <label for="atividade">Atividade:</label>
+                  <textarea name="atividade" id="atividade"></textarea>
+               </div>
+          
+               <div class="ui-body-b">
+                  <fieldset class="ui-grid-a">
+                     <div class="ui-block-a"><button type="submit" data-theme="a">Salvar</button></div>     
+                     <div class="ui-block-b"><button type="submit" data-theme="d">Cancelar</button></div>
+                  </fieldset>
+               </div>
+            </form>
+         </div>
+         <div data-role="footer">
+            <h3>Prof. Angelo Augusto Frozza</h3>
+         </div>
+      </div>
+   </body>
+</html>
